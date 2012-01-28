@@ -1,0 +1,23 @@
+Write all the programs, given below, using system calls. 
+ 
+1. Write a C program to implement cp command in linux using system calls.
+   (Source and destination of files should be taken from command line) 
+
+2. Write a C Program to read a string( a line as well) and append it to  
+   the given file. 
+
+3. Write a C function 'fsize' which prints the size of a given file (in 
+   linux a directory is also a kind of file). If the file is a directory 
+   make a directory walk to apply 'fsize' on all files in it. The 
+   output in this case should be the list of files in the directory and 
+   its size.   
+
+4. Write a C program to print version number of your linux operating 
+   system and other hardware details like sys name,release version, 
+   processor name using uname() system call.
+
+5. Write a C program to implement 'ls -l' using stat() system call.(file 
+   name should be taken through command line)
+
+6. Write a C program to implement 'ls | sort', using fork() & pipe() 
+   system calls. 
