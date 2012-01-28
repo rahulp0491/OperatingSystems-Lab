@@ -1,0 +1,23 @@
+Write a shell script:
+
+1. To print month name if month number is given.
+
+2. To find the factorial of a number using recursive function call.
+
+3. To create your own customized shell. After executing the script you will be ending up with a
+prompt with your name and you will be able to execute all scripts (questions given for lab
+assignmnet 1 and 2)with short commands.
+
+4. To implement a calculator with minimum functionalities(add , sub, mul, div), using function
+& case utility . The script should be menu driven.
+
+5. To read two words and a file name from command line and replace the occurrences of first
+word with the second word.
+
+6. To implement following using select construct:
+	a. create a file (using touch)
+	b. rename a file
+	c. delete a file
+	d. copy file
+	The script should be menu driven.
+

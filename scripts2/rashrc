@@ -1,0 +1,62 @@
+#! /bin/bash
+
+echo
+RED='\e[1;31m'
+NC='\e[0m'
+PS1="${RED}Rahul->$ ${NC}"
+PS2="${RED}-> ${NC}"
+
+# lab1, q1
+alias max=./oslab1/1.sh
+
+# lab1, q2
+alias evenodd=./oslab1/2.sh
+
+# lab1, q3
+alias filecmp=./oslab1/3.sh
+
+# lab1, q4
+alias pfile=./oslab1/4.sh
+
+# lab1, q5
+alias numcomb=./oslab1/5.sh
+
+# lab1, q6
+alias delzbyte=./oslab1/6.sh
+
+# lab1, q7
+alias pnum=./oslab1/7.sh
+
+# lab1, q8
+alias mvhidden=./oslab1/8.sh
+
+# lab1, q9
+alias rfmkdir=./oslab1/9.sh
+
+# lab1, q10
+alias bflist=./oslab1/10.sh
+
+#lab1, modification 1
+alias isprime=./oslab1/isprime.sh
+
+#lab1, modification 2
+alias textodoc=./oslab1/textodoc.sh
+
+#lab2, q1
+alias month=./1.sh
+
+#lab2, q2
+alias fact=./2.sh
+
+#lab2, q3
+alias rash=./3.sh
+
+#lab2, q4
+alias calc=./4.sh
+
+#lab2, q5
+alias reptext=./5.sh
+
+#lab2, q6
+alias fileop=./6.sh
+
