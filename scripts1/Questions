@@ -1,0 +1,32 @@
+Write a shell script:
+
+1. To compare two given numbers and print the largest. Give the numbers as
+input from the command line.
+
+2. To find whether a given number is Even or Odd.
+
+3. To check whether the two file contents are same or not. Given two file
+names as arguments.
+
+4. To print the contents of a file from a given line number to another given line
+number. Get arguments (file name, first line number, second line number)
+from command line.
+
+5. To generate all combinations of 1,2 and 3 using for loops.
+
+6. To read a directory name as a command line argument and delete all files in
+that directory whose size is 0 bytes.
+
+7. To print numbers from 1 to 10, using until construct.
+
+8. Move all hidden files from a given directory to a newly created directory.
+
+9. Which accepts a name as argument and then checks whether it exists as a
+directory. If it doesn’t exit create the directory with the given name or if it
+exists as an ordinary file, then remove the file and create a directory with the
+given name.
+
+10. To traverse a directory tree in breadth-first order. ( Breadth-first searches
+explore all the nodes at a given level before descending lower in the tree.)
+The input given is a directory name.
+
