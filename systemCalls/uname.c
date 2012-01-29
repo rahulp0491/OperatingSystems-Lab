@@ -9,13 +9,14 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <sys/utsname.h>
-#define BUFSIZE 10000
+#define BUFSIZE 10000 // MAXIMUM BUFFER SIZE
 
+/* ERROR MESSAGE */
 void error (char *errMsg) {
 	int len;
 	char msg[BUFSIZE];
 	len = sprintf(msg, "ERROR: %s\n", errMsg);
-	write (1, msg, len);
+	write (2, msg, len);
 	exit(1);
 }
 

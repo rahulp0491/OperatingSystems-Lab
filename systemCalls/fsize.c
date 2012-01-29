@@ -11,18 +11,20 @@
 #define BUFSIZE 10000
 #define DIRSIZE 4096
 
+/* ERROR MESSAGE */
 void error (char *errMsg) {
 	int len;
 	char msg[BUFSIZE];
 	len = sprintf(msg, "ERROR: %s\n", errMsg);
-	write (1, msg, len);
+	write (2, msg, len);
 	exit(1);
 }
 
-int flag = 0;
-char *p;
-int count = 1;
+int flag = 0; // TO CHECK IF ITS INSIDE A DIRECTORY
+char *p; // TO STORE THE NAME OF THE DIRECTORY TO LATER GET ABSOLUTE PATH OF FILES
+int count = 1; // TO GET THE COUNT OF FILES INSIDE A DIRECTORY
 
+/* SIZE OF FILES */
 void fSize (struct stat fS, int fd, char *s) {
 	struct stat st;
 	int f;
@@ -64,7 +66,7 @@ void fSize (struct stat fS, int fd, char *s) {
 		break;
 	}
 }
-
+/* MAIN -- INIT */
 int main (int args, char *argv[]) {
 	if (args != 2)
 		error ("Insufficient arguments");

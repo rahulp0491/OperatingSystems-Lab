@@ -11,26 +11,27 @@
 #include <pwd.h>
 #include <grp.h>
 #include <time.h>
-#define BUFSIZE 10000
-#define DIRSIZE 4096
+#define BUFSIZE 10000 // MAXIMUM BUFFER SIZE
+#define DIRSIZE 4096 // DIRECTORY SIZE -- CONSTANT
 
 
+/* ERROR MESSAGE */
 void error (char *errMsg) {
 	int len;
 	char msg[BUFSIZE];
 	len = sprintf(msg, "ERROR: %s\n", errMsg);
-	write (1, msg, len);
+	write (2, msg, len);
 	exit(1);
 }
 
-int flag = 0;
-char *p;
-int count = 1;
-char pstring [BUFSIZE];
+int flag = 0; // TO CHECK IF ITS IN A DIRECTORY
+char *p; // TO STORE NAME OF FILE GLOBALLY
+char pstring [BUFSIZE]; // STRING TO STORE PERMISSIONS
 
+/* GET PERMISSIONS FOR A FILE */
 char *getP (struct stat fS) {
 	int len=0;
-	bzero (pstring, BUFSIZE);
+	bzero (pstring, BUFSIZE); //FLUSHING BUFFER
 	if (S_ISDIR (fS.st_mode)) 
 		strcat (pstring, "d");
 	else if (S_ISREG (fS.st_mode))
@@ -95,6 +96,7 @@ int blocks=0;
 char name [BUFSIZE];
 int len=-1;
 
+/* DETAILS OF A FILE */
 char * fSize (struct stat fS, int fd, char *s) {
 	struct stat st;
 	int f;
@@ -153,6 +155,7 @@ char * fSize (struct stat fS, int fd, char *s) {
 	return name;
 }
 
+/* MAIN -- INIT */
 int main (int args, char *argv[]) {
 	if (args != 2)
 		error ("Insufficient arguments");

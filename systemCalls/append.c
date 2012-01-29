@@ -7,11 +7,12 @@
 #include <unistd.h>
 #define BUFSIZE 10000
 
+/* ERROR MESSAGE */
 void error (char *errMsg) {
 	int len;
 	char msg[BUFSIZE];
 	len = sprintf(msg, "ERROR: %s\n", errMsg);
-	write (1, msg, len);
+	write (2, msg, len);
 	exit(1);
 }
 
