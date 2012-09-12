@@ -13,7 +13,7 @@ do
 				read b
 				mv $a $b ;;
 				
-		Delete)	echo "Filename:" 
+		Delete)		echo "Filename:" 
 				read a
 				rm $a ;;
 				
